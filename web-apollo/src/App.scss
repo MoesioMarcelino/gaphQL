@@ -1,0 +1,102 @@
+.app {
+  height: 100vh;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  padding: 0 40px;
+  height: inherit;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-right: 1px solid #999;
+
+  input {
+    border: 0;
+    outline: 0;
+    width: 360px;
+    padding: 15px;
+
+    font-size: 16px;
+
+    &:focus {
+      outline: 2px solid #b3a2e8;
+    }
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+
+  button {
+    padding: 15px;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 8px;
+
+    transition: filter 0.3s;
+
+    &:hover {
+      filter: brightness(0.9);
+    }
+  }
+
+  button[type='submit'] {
+    background-color: #7159c1;
+  }
+
+  button[type='button'] {
+    background-color: #f24e4e;
+  }
+}
+
+.bookList {
+  flex: 4;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bookItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #baa9f3;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+
+  transition: filter 0.3s;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+
+  .actions {
+    display: flex;
+    gap: 20px;
+
+    .delete,
+    .edit {
+      transition: all 0.3s;
+
+      &:hover {
+        filter: brightness(1.2);
+      }
+    }
+  }
+}
